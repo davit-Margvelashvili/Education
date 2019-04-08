@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Education.UI.usercontrols;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -15,8 +16,11 @@ namespace Education.UI.Forms
         public MainForm()
         {
             InitializeComponent();
+
+            contentpanel.Controls.Clear();
+            contentpanel.Controls.Add(new TableControl());
         }
 
-        
+       
     }
 }

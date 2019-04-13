@@ -37,6 +37,8 @@
           <Property Name="SpecificHeat" Type="numeric" Precision="6" Scale="3" />
           <Property Name="NumberofShells" Type="int" Nullable="false" />
           <Property Name="NumberofValence" Type="int" />
+          <Property Name="Row" Type="int" />
+          <Property Name="Column" Type="int" />
         </EntityType>
         <EntityContainer Name="EducationDataBaseModelStoreContainer">
           <EntitySet Name="PeriodicTable" EntityType="Self.PeriodicTable" Schema="dbo" store:Type="Tables" />
@@ -80,6 +82,8 @@
           <Property Name="SpecificHeat" Type="Decimal" Precision="6" Scale="3" />
           <Property Name="NumberofShells" Type="Int32" Nullable="false" />
           <Property Name="NumberofValence" Type="Int32" />
+          <Property Name="Row" Type="Int32" />
+          <Property Name="Column" Type="Int32" />
         </EntityType>
       </Schema>
     </edmx:ConceptualModels>
@@ -90,6 +94,8 @@
           <EntitySetMapping Name="PeriodicTables">
             <EntityTypeMapping TypeName="EducationDataBaseModel.PeriodicTable">
               <MappingFragment StoreEntitySet="PeriodicTable">
+                <ScalarProperty Name="Column" ColumnName="Column" />
+                <ScalarProperty Name="Row" ColumnName="Row" />
                 <ScalarProperty Name="NumberofValence" ColumnName="NumberofValence" />
                 <ScalarProperty Name="NumberofShells" ColumnName="NumberofShells" />
                 <ScalarProperty Name="SpecificHeat" ColumnName="SpecificHeat" />
@@ -135,7 +141,7 @@
     <Options>
       <DesignerInfoPropertySet>
         <DesignerProperty Name="ValidateOnBuild" Value="true" />
-        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="False" />
         <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
         <DesignerProperty Name="UseLegacyProvider" Value="false" />
         <DesignerProperty Name="CodeGenerationStrategy" Value="None" />

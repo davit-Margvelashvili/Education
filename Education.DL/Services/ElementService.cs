@@ -44,7 +44,10 @@ namespace Education.DL.Services
                     SpecificHeat = t.SpecificHeat,
                     NumberofShells = t.NumberofShells,
                     NumberofValence = t.NumberofValence,
+                    Row  = t.Row,
+                    Column = t.Column
                 }).ToList();
+             
             }
 
         }

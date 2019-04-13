@@ -79,7 +79,6 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>EducationEntityModel.edmx</DependentUpon>
     </Compile>
-    <Compile Include="Extensions.cs" />
     <Compile Include="PeriodicTable.cs">
       <DependentUpon>EducationEntityModel.tt</DependentUpon>
     </Compile>

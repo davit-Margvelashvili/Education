@@ -37,7 +37,8 @@ namespace Education.BL.Models
         public decimal? SpecificHeat { get; set; }
         public int NumberofShells { get; set; }
         public int? NumberofValence { get; set; }
-
+        public int? Row { get; set; }
+        public int? Column { get; set; }
     }
 }
 

@@ -21,27 +21,14 @@ namespace Education.UI.usercontrols
             ElementService = elementService;
 
             var elements = ElementService.GetElements();
-            var elementControls = elements.Select(e => new Elementcontrol(e)).ToList();
+            var elementControls = elements.Where(e => e.Row != null).Select(e => new Elementcontrol(e)).ToList();
 
-            int row = 1, column = 1;
             
             foreach (var element in elementControls)
             {
-                if(column == 19)
-                {
-                    column = 1;
-                    row++;
-                }
-                if(row == 8)
-                {
-                    break;
-                }
-
                 tablePanel.Controls.Add(element);
-                tablePanel.SetColumn(element, column);
-                tablePanel.SetRow(element, row);
-
-                column++;
+                tablePanel.SetColumn(element, element.Column.Value);
+                tablePanel.SetRow(element, element.Row.Value);
             }
 
         }

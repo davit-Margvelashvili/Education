@@ -42,5 +42,7 @@ namespace Education.DL
         public Nullable<decimal> SpecificHeat { get; set; }
         public int NumberofShells { get; set; }
         public Nullable<int> NumberofValence { get; set; }
+        public Nullable<int> Row { get; set; }
+        public Nullable<int> Column { get; set; }
     }
 }

@@ -7,49 +7,42 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Education.BL.Services;
 
 namespace Education.UI.usercontrols
 {
     public partial class TableControl : UserControl
     {
-        public TableControl()
+        IElementService ElementService { get; set; }
+
+        public TableControl(IElementService elementService)
         {
             InitializeComponent();
+            ElementService = elementService;
 
-            //List<Elementcontrol> elements = new List<Elementcontrol>
-            //{
-            //    new Elementcontrol(new ElementModel
-            //    {
-            //       //  AtomicNumber = 1,
-            //       //  Atomicradius = 1,
-            //         ChemicalSymbol = "H",
-            //         //Color = Color.SkyBlue,
-            //       //  Row = 1,
-            //        // Column =1,
+            var elements = ElementService.GetElements();
+            var elementControls = elements.Select(e => new Elementcontrol(e)).ToList();
 
-            //    }),
+            int row = 1, column = 1;
+            
+            foreach (var element in elementControls)
+            {
+                if(column == 19)
+                {
+                    column = 1;
+                    row++;
+                }
+                if(row == 8)
+                {
+                    break;
+                }
 
-            //    new Elementcontrol(new ElementModel
-            //    {
-            //         AtomicNumber = 1,
-            //         Atomicradius = 1,
-            //         ChemicalSymbol = "B",
-            //         Color = Color.SkyBlue,
-            //         Row = 1,
-            //         Column =12
-            //    }),
+                tablePanel.Controls.Add(element);
+                tablePanel.SetColumn(element, column);
+                tablePanel.SetRow(element, row);
 
-            //};
-
-
-            //foreach (var element in elements)
-            //{
-
-            //    tablePanel.Controls.Add(element);
-            //    tablePanel.SetColumn(element, element.Column);
-            //    tablePanel.SetRow(element, element.Row);
-
-            //}
+                column++;
+            }
 
         }
 

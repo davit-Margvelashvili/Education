@@ -1,0 +1,147 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="EducationDataBaseModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="PeriodicTable">
+          <Key>
+            <PropertyRef Name="AtomicNumber" />
+          </Key>
+          <Property Name="AtomicNumber" Type="int" Nullable="false" />
+          <Property Name="Element" Type="varchar" MaxLength="13" Nullable="false" />
+          <Property Name="Symbol" Type="varchar" MaxLength="3" Nullable="false" />
+          <Property Name="AtomicMass" Type="numeric" Precision="7" Scale="3" Nullable="false" />
+          <Property Name="NumberofNeutrons" Type="int" Nullable="false" />
+          <Property Name="NumberofProtons" Type="int" Nullable="false" />
+          <Property Name="NumberofElectrons" Type="int" Nullable="false" />
+          <Property Name="PeriodNumber" Type="int" Nullable="false" />
+          <Property Name="GroupNumber" Type="int" />
+          <Property Name="Phase" Type="varchar" MaxLength="10" Nullable="false" />
+          <Property Name="Radioactive" Type="varchar" MaxLength="3" />
+          <Property Name="Natural" Type="varchar" MaxLength="3" />
+          <Property Name="Metal" Type="varchar" MaxLength="3" />
+          <Property Name="Nonmetal" Type="varchar" MaxLength="3" />
+          <Property Name="Metalloid" Type="varchar" MaxLength="3" />
+          <Property Name="ElementType" Type="varchar" MaxLength="20" />
+          <Property Name="AtomicRadius" Type="numeric" Precision="4" Scale="2" />
+          <Property Name="Electronegativity" Type="numeric" Precision="4" Scale="2" />
+          <Property Name="FirstIonization" Type="numeric" Precision="7" Scale="4" />
+          <Property Name="Density" Type="numeric" Precision="8" Scale="6" />
+          <Property Name="MeltingPoint" Type="numeric" Precision="7" Scale="3" />
+          <Property Name="BoilingPoint" Type="numeric" Precision="6" Scale="2" />
+          <Property Name="NumberOfIsotopes" Type="int" />
+          <Property Name="Discoverer" Type="varchar" MaxLength="28" />
+          <Property Name="DiscoverYear" Type="int" />
+          <Property Name="SpecificHeat" Type="numeric" Precision="6" Scale="3" />
+          <Property Name="NumberofShells" Type="int" Nullable="false" />
+          <Property Name="NumberofValence" Type="int" />
+        </EntityType>
+        <EntityContainer Name="EducationDataBaseModelStoreContainer">
+          <EntitySet Name="PeriodicTable" EntityType="Self.PeriodicTable" Schema="dbo" store:Type="Tables" />
+        </EntityContainer>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="EducationDataBaseModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityContainer Name="EducationDataBaseEntities" annotation:LazyLoadingEnabled="true" >
+          <EntitySet Name="PeriodicTables" EntityType="EducationDataBaseModel.PeriodicTable" />
+        </EntityContainer>
+        <EntityType Name="PeriodicTable">
+          <Key>
+            <PropertyRef Name="AtomicNumber" />
+          </Key>
+          <Property Name="AtomicNumber" Type="Int32" Nullable="false" />
+          <Property Name="Element" Type="String" Nullable="false" MaxLength="13" FixedLength="false" Unicode="false" />
+          <Property Name="Symbol" Type="String" Nullable="false" MaxLength="3" FixedLength="false" Unicode="false" />
+          <Property Name="AtomicMass" Type="Decimal" Nullable="false" Precision="7" Scale="3" />
+          <Property Name="NumberofNeutrons" Type="Int32" Nullable="false" />
+          <Property Name="NumberofProtons" Type="Int32" Nullable="false" />
+          <Property Name="NumberofElectrons" Type="Int32" Nullable="false" />
+          <Property Name="PeriodNumber" Type="Int32" Nullable="false" />
+          <Property Name="GroupNumber" Type="Int32" />
+          <Property Name="Phase" Type="String" Nullable="false" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="Radioactive" Type="String" MaxLength="3" FixedLength="false" Unicode="false" />
+          <Property Name="Natural" Type="String" MaxLength="3" FixedLength="false" Unicode="false" />
+          <Property Name="Metal" Type="String" MaxLength="3" FixedLength="false" Unicode="false" />
+          <Property Name="Nonmetal" Type="String" MaxLength="3" FixedLength="false" Unicode="false" />
+          <Property Name="Metalloid" Type="String" MaxLength="3" FixedLength="false" Unicode="false" />
+          <Property Name="ElementType" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="AtomicRadius" Type="Decimal" Precision="4" Scale="2" />
+          <Property Name="Electronegativity" Type="Decimal" Precision="4" Scale="2" />
+          <Property Name="FirstIonization" Type="Decimal" Precision="7" Scale="4" />
+          <Property Name="Density" Type="Decimal" Precision="8" Scale="6" />
+          <Property Name="MeltingPoint" Type="Decimal" Precision="7" Scale="3" />
+          <Property Name="BoilingPoint" Type="Decimal" Precision="6" Scale="2" />
+          <Property Name="NumberOfIsotopes" Type="Int32" />
+          <Property Name="Discoverer" Type="String" MaxLength="28" FixedLength="false" Unicode="false" />
+          <Property Name="DiscoverYear" Type="Int32" />
+          <Property Name="SpecificHeat" Type="Decimal" Precision="6" Scale="3" />
+          <Property Name="NumberofShells" Type="Int32" Nullable="false" />
+          <Property Name="NumberofValence" Type="Int32" />
+        </EntityType>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="EducationDataBaseModelStoreContainer" CdmEntityContainer="EducationDataBaseEntities" >
+          <EntitySetMapping Name="PeriodicTables">
+            <EntityTypeMapping TypeName="EducationDataBaseModel.PeriodicTable">
+              <MappingFragment StoreEntitySet="PeriodicTable">
+                <ScalarProperty Name="NumberofValence" ColumnName="NumberofValence" />
+                <ScalarProperty Name="NumberofShells" ColumnName="NumberofShells" />
+                <ScalarProperty Name="SpecificHeat" ColumnName="SpecificHeat" />
+                <ScalarProperty Name="DiscoverYear" ColumnName="DiscoverYear" />
+                <ScalarProperty Name="Discoverer" ColumnName="Discoverer" />
+                <ScalarProperty Name="NumberOfIsotopes" ColumnName="NumberOfIsotopes" />
+                <ScalarProperty Name="BoilingPoint" ColumnName="BoilingPoint" />
+                <ScalarProperty Name="MeltingPoint" ColumnName="MeltingPoint" />
+                <ScalarProperty Name="Density" ColumnName="Density" />
+                <ScalarProperty Name="FirstIonization" ColumnName="FirstIonization" />
+                <ScalarProperty Name="Electronegativity" ColumnName="Electronegativity" />
+                <ScalarProperty Name="AtomicRadius" ColumnName="AtomicRadius" />
+                <ScalarProperty Name="ElementType" ColumnName="ElementType" />
+                <ScalarProperty Name="Metalloid" ColumnName="Metalloid" />
+                <ScalarProperty Name="Nonmetal" ColumnName="Nonmetal" />
+                <ScalarProperty Name="Metal" ColumnName="Metal" />
+                <ScalarProperty Name="Natural" ColumnName="Natural" />
+                <ScalarProperty Name="Radioactive" ColumnName="Radioactive" />
+                <ScalarProperty Name="Phase" ColumnName="Phase" />
+                <ScalarProperty Name="GroupNumber" ColumnName="GroupNumber" />
+                <ScalarProperty Name="PeriodNumber" ColumnName="PeriodNumber" />
+                <ScalarProperty Name="NumberofElectrons" ColumnName="NumberofElectrons" />
+                <ScalarProperty Name="NumberofProtons" ColumnName="NumberofProtons" />
+                <ScalarProperty Name="NumberofNeutrons" ColumnName="NumberofNeutrons" />
+                <ScalarProperty Name="AtomicMass" ColumnName="AtomicMass" />
+                <ScalarProperty Name="Symbol" ColumnName="Symbol" />
+                <ScalarProperty Name="Element" ColumnName="Element" />
+                <ScalarProperty Name="AtomicNumber" ColumnName="AtomicNumber" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

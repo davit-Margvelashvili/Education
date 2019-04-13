@@ -7,18 +7,19 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Education.BL.Models;
 
 namespace Education.UI.usercontrols
 {
     public partial class Elementcontrol : UserControl
     {
-        ElementModel element = new ElementModel();
-        public Elementcontrol()
+        public ElementModel Element { get; set; }
+        public Elementcontrol(ElementModel element)
         {
             InitializeComponent();
-            element.ChemicalSymbol = ChemicalSymbolLabel.Text;
-            
+            Element = element;
 
+            ChemicalSymbolLabel.Text = Element.Symbol;
         }
 
 

@@ -1,4 +1,5 @@
-﻿using Education.UI.usercontrols;
+﻿using Education.DL.Services;
+using Education.UI.usercontrols;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -18,7 +19,7 @@ namespace Education.UI.Forms
             InitializeComponent();
 
             contentpanel.Controls.Clear();
-            contentpanel.Controls.Add(new TableControl());
+            contentpanel.Controls.Add(new TableControl(new ElementService()));
         }
 
        

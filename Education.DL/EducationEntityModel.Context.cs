@@ -16,7 +16,7 @@ namespace Education.DL
     public partial class EducationDataBaseEntities : DbContext
     {
         public EducationDataBaseEntities()
-            : base(@"C:\Users\Student.DESKTOP-JFLC3TS\Desktop\Education\Education.DL\EducationDataBaseEntities")
+            : base(@"C:\Users\Student.DESKTOP-JFLC3TS\Education\Education.DL\EducationDataBaseEntities")
         {
         }
     

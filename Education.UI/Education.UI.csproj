@@ -66,6 +66,24 @@
     <Compile Include="usercontrols\Elementcontrol.Designer.cs">
       <DependentUpon>Elementcontrol.cs</DependentUpon>
     </Compile>
+    <Compile Include="usercontrols\NameQuizcontrol.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="usercontrols\NameQuizcontrol.Designer.cs">
+      <DependentUpon>NameQuizcontrol.cs</DependentUpon>
+    </Compile>
+    <Compile Include="usercontrols\QuizControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="usercontrols\QuizControl.Designer.cs">
+      <DependentUpon>QuizControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="usercontrols\SymbolQuizControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="usercontrols\SymbolQuizControl.Designer.cs">
+      <DependentUpon>SymbolQuizControl.cs</DependentUpon>
+    </Compile>
     <Compile Include="usercontrols\TableControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -87,6 +105,15 @@
     </Compile>
     <EmbeddedResource Include="usercontrols\Elementcontrol.resx">
       <DependentUpon>Elementcontrol.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="usercontrols\NameQuizcontrol.resx">
+      <DependentUpon>NameQuizcontrol.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="usercontrols\QuizControl.resx">
+      <DependentUpon>QuizControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="usercontrols\SymbolQuizControl.resx">
+      <DependentUpon>SymbolQuizControl.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="usercontrols\TableControl.resx">
       <DependentUpon>TableControl.cs</DependentUpon>
@@ -123,6 +150,18 @@
       <Project>{0AAE34E3-8CA3-4449-A6AE-28813A51F387}</Project>
       <Name>Education.DL</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\wordle_periodic_table.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\periodictable.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-sodium-100.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-arrow-48.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -63,6 +63,16 @@ namespace Education.UI.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap icons8_arrow_48 {
+            get {
+                object obj = ResourceManager.GetObject("icons8-arrow-48", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap icons8_menu_100 {
             get {
                 object obj = ResourceManager.GetObject("icons8-menu-100", resourceCulture);
@@ -83,9 +93,39 @@ namespace Education.UI.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap icons8_sodium_100 {
+            get {
+                object obj = ResourceManager.GetObject("icons8-sodium-100", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap mendeleevpic {
             get {
                 object obj = ResourceManager.GetObject("mendeleevpic", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap periodictable {
+            get {
+                object obj = ResourceManager.GetObject("periodictable", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap wordle_periodic_table {
+            get {
+                object obj = ResourceManager.GetObject("wordle_periodic_table", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

@@ -142,7 +142,7 @@
             // 
             this.TitleLabel.AutoSize = true;
             this.TitleLabel.Font = new System.Drawing.Font("Sylfaen", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TitleLabel.Location = new System.Drawing.Point(237, 30);
+            this.TitleLabel.Location = new System.Drawing.Point(242, 38);
             this.TitleLabel.Name = "TitleLabel";
             this.TitleLabel.Size = new System.Drawing.Size(366, 42);
             this.TitleLabel.TabIndex = 4;
@@ -152,7 +152,7 @@
             // 
             this.SymbolLabel.AutoSize = true;
             this.SymbolLabel.Font = new System.Drawing.Font("Sylfaen", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.SymbolLabel.Location = new System.Drawing.Point(344, 147);
+            this.SymbolLabel.Location = new System.Drawing.Point(338, 155);
             this.SymbolLabel.Name = "SymbolLabel";
             this.SymbolLabel.Size = new System.Drawing.Size(183, 62);
             this.SymbolLabel.TabIndex = 3;
@@ -163,7 +163,7 @@
             this.AnswerChecklabel.AutoSize = true;
             this.AnswerChecklabel.Font = new System.Drawing.Font("Sylfaen", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.AnswerChecklabel.ForeColor = System.Drawing.Color.LimeGreen;
-            this.AnswerChecklabel.Location = new System.Drawing.Point(312, 93);
+            this.AnswerChecklabel.Location = new System.Drawing.Point(293, 92);
             this.AnswerChecklabel.Name = "AnswerChecklabel";
             this.AnswerChecklabel.Size = new System.Drawing.Size(245, 42);
             this.AnswerChecklabel.TabIndex = 6;
@@ -174,6 +174,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackgroundImage = global::Education.UI.Properties.Resources.background;
             this.Controls.Add(this.AnswerChecklabel);
             this.Controls.Add(this.AnswersPanel);
             this.Controls.Add(this.TitleLabel);

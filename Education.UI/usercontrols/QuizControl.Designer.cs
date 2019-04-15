@@ -71,9 +71,9 @@
             this.panel2.Controls.Add(this.pictureBox4);
             this.panel2.Controls.Add(this.pictureBox5);
             this.panel2.Controls.Add(this.label4);
-            this.panel2.Location = new System.Drawing.Point(419, 223);
+            this.panel2.Location = new System.Drawing.Point(419, 226);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(421, 354);
+            this.panel2.Size = new System.Drawing.Size(421, 351);
             this.panel2.TabIndex = 5;
             // 
             // button1

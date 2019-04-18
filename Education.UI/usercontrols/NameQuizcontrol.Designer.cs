@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.label1 = new System.Windows.Forms.Label();
+            this.nameLabel = new System.Windows.Forms.Label();
             this.TitleLabel = new System.Windows.Forms.Label();
             this.AnswersPanel = new System.Windows.Forms.Panel();
             this.Answer4LAbel = new System.Windows.Forms.Label();
@@ -43,21 +43,21 @@
             this.AnswersPanel.SuspendLayout();
             this.SuspendLayout();
             // 
-            // label1
+            // nameLabel
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Sylfaen", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(346, 143);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(148, 62);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Name";
+            this.nameLabel.AutoSize = true;
+            this.nameLabel.Font = new System.Drawing.Font("Sylfaen", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.nameLabel.Location = new System.Drawing.Point(346, 143);
+            this.nameLabel.Name = "nameLabel";
+            this.nameLabel.Size = new System.Drawing.Size(148, 62);
+            this.nameLabel.TabIndex = 0;
+            this.nameLabel.Text = "Name";
             // 
             // TitleLabel
             // 
             this.TitleLabel.AutoSize = true;
             this.TitleLabel.Font = new System.Drawing.Font("Sylfaen", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TitleLabel.Location = new System.Drawing.Point(237, 19);
+            this.TitleLabel.Location = new System.Drawing.Point(237, 12);
             this.TitleLabel.Name = "TitleLabel";
             this.TitleLabel.Size = new System.Drawing.Size(366, 42);
             this.TitleLabel.TabIndex = 1;
@@ -169,6 +169,7 @@
             this.AnswerChecklabel.TabIndex = 3;
             this.AnswerChecklabel.Text = "Correct Answer";
             this.AnswerChecklabel.Visible = false;
+            this.AnswerChecklabel.Click += new System.EventHandler(this.AnswerChecklabel_Click);
             // 
             // NameQuizcontrol
             // 
@@ -177,7 +178,7 @@
             this.Controls.Add(this.AnswerChecklabel);
             this.Controls.Add(this.AnswersPanel);
             this.Controls.Add(this.TitleLabel);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.nameLabel);
             this.Name = "NameQuizcontrol";
             this.Size = new System.Drawing.Size(840, 577);
             this.AnswersPanel.ResumeLayout(false);
@@ -189,7 +190,7 @@
 
         #endregion
 
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label nameLabel;
         private System.Windows.Forms.Label TitleLabel;
         private System.Windows.Forms.Panel AnswersPanel;
         private System.Windows.Forms.Label Answer4LAbel;

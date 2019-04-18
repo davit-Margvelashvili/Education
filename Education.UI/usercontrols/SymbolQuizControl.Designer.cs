@@ -28,6 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.TitleLabel = new System.Windows.Forms.Label();
+            this.SymbolLabel = new System.Windows.Forms.Label();
+            this.AnswerChecklabel = new System.Windows.Forms.Label();
             this.AnswersPanel = new System.Windows.Forms.Panel();
             this.Answer4LAbel = new System.Windows.Forms.Label();
             this.Answer3LAbel = new System.Windows.Forms.Label();
@@ -37,11 +40,41 @@
             this.label7 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.Answer1LAbel = new System.Windows.Forms.Label();
-            this.TitleLabel = new System.Windows.Forms.Label();
-            this.SymbolLabel = new System.Windows.Forms.Label();
-            this.AnswerChecklabel = new System.Windows.Forms.Label();
             this.AnswersPanel.SuspendLayout();
             this.SuspendLayout();
+            // 
+            // TitleLabel
+            // 
+            this.TitleLabel.AutoSize = true;
+            this.TitleLabel.Font = new System.Drawing.Font("Sylfaen", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TitleLabel.Location = new System.Drawing.Point(242, 10);
+            this.TitleLabel.Name = "TitleLabel";
+            this.TitleLabel.Size = new System.Drawing.Size(366, 42);
+            this.TitleLabel.TabIndex = 4;
+            this.TitleLabel.Text = "Atomic Symbol → Name";
+            // 
+            // SymbolLabel
+            // 
+            this.SymbolLabel.AutoSize = true;
+            this.SymbolLabel.BackColor = System.Drawing.Color.White;
+            this.SymbolLabel.Font = new System.Drawing.Font("Sylfaen", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.SymbolLabel.Location = new System.Drawing.Point(323, 153);
+            this.SymbolLabel.Name = "SymbolLabel";
+            this.SymbolLabel.Size = new System.Drawing.Size(183, 62);
+            this.SymbolLabel.TabIndex = 3;
+            this.SymbolLabel.Text = "Symbol";
+            // 
+            // AnswerChecklabel
+            // 
+            this.AnswerChecklabel.AutoSize = true;
+            this.AnswerChecklabel.Font = new System.Drawing.Font("Sylfaen", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.AnswerChecklabel.ForeColor = System.Drawing.Color.LimeGreen;
+            this.AnswerChecklabel.Location = new System.Drawing.Point(290, 68);
+            this.AnswerChecklabel.Name = "AnswerChecklabel";
+            this.AnswerChecklabel.Size = new System.Drawing.Size(245, 42);
+            this.AnswerChecklabel.TabIndex = 6;
+            this.AnswerChecklabel.Text = "Correct Answer";
+            this.AnswerChecklabel.Visible = false;
             // 
             // AnswersPanel
             // 
@@ -67,6 +100,7 @@
             this.Answer4LAbel.Size = new System.Drawing.Size(83, 35);
             this.Answer4LAbel.TabIndex = 0;
             this.Answer4LAbel.Text = "label2";
+            this.Answer4LAbel.Click += new System.EventHandler(this.Answer1LAbel_Click);
             // 
             // Answer3LAbel
             // 
@@ -77,6 +111,7 @@
             this.Answer3LAbel.Size = new System.Drawing.Size(83, 35);
             this.Answer3LAbel.TabIndex = 0;
             this.Answer3LAbel.Text = "label2";
+            this.Answer3LAbel.Click += new System.EventHandler(this.Answer1LAbel_Click);
             // 
             // Answer2LAbel
             // 
@@ -87,6 +122,7 @@
             this.Answer2LAbel.Size = new System.Drawing.Size(83, 35);
             this.Answer2LAbel.TabIndex = 0;
             this.Answer2LAbel.Text = "label2";
+            this.Answer2LAbel.Click += new System.EventHandler(this.Answer1LAbel_Click);
             // 
             // label8
             // 
@@ -137,44 +173,13 @@
             this.Answer1LAbel.Size = new System.Drawing.Size(83, 35);
             this.Answer1LAbel.TabIndex = 0;
             this.Answer1LAbel.Text = "label2";
-            // 
-            // TitleLabel
-            // 
-            this.TitleLabel.AutoSize = true;
-            this.TitleLabel.Font = new System.Drawing.Font("Sylfaen", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TitleLabel.Location = new System.Drawing.Point(242, 38);
-            this.TitleLabel.Name = "TitleLabel";
-            this.TitleLabel.Size = new System.Drawing.Size(366, 42);
-            this.TitleLabel.TabIndex = 4;
-            this.TitleLabel.Text = "Atomic Symbol → Name";
-            // 
-            // SymbolLabel
-            // 
-            this.SymbolLabel.AutoSize = true;
-            this.SymbolLabel.Font = new System.Drawing.Font("Sylfaen", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.SymbolLabel.Location = new System.Drawing.Point(338, 155);
-            this.SymbolLabel.Name = "SymbolLabel";
-            this.SymbolLabel.Size = new System.Drawing.Size(183, 62);
-            this.SymbolLabel.TabIndex = 3;
-            this.SymbolLabel.Text = "Symbol";
-            // 
-            // AnswerChecklabel
-            // 
-            this.AnswerChecklabel.AutoSize = true;
-            this.AnswerChecklabel.Font = new System.Drawing.Font("Sylfaen", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.AnswerChecklabel.ForeColor = System.Drawing.Color.LimeGreen;
-            this.AnswerChecklabel.Location = new System.Drawing.Point(293, 92);
-            this.AnswerChecklabel.Name = "AnswerChecklabel";
-            this.AnswerChecklabel.Size = new System.Drawing.Size(245, 42);
-            this.AnswerChecklabel.TabIndex = 6;
-            this.AnswerChecklabel.Text = "Correct Answer";
-            this.AnswerChecklabel.Visible = false;
+            this.Answer1LAbel.Click += new System.EventHandler(this.Answer1LAbel_Click);
             // 
             // SymbolQuizControl
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackgroundImage = global::Education.UI.Properties.Resources.background;
+            this.BackgroundImage = global::Education.UI.Properties.Resources.table;
             this.Controls.Add(this.AnswerChecklabel);
             this.Controls.Add(this.AnswersPanel);
             this.Controls.Add(this.TitleLabel);
@@ -189,7 +194,9 @@
         }
 
         #endregion
-
+        private System.Windows.Forms.Label TitleLabel;
+        private System.Windows.Forms.Label SymbolLabel;
+        private System.Windows.Forms.Label AnswerChecklabel;
         private System.Windows.Forms.Panel AnswersPanel;
         private System.Windows.Forms.Label Answer4LAbel;
         private System.Windows.Forms.Label Answer3LAbel;
@@ -199,8 +206,5 @@
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label Answer1LAbel;
-        private System.Windows.Forms.Label TitleLabel;
-        private System.Windows.Forms.Label SymbolLabel;
-        private System.Windows.Forms.Label AnswerChecklabel;
     }
 }

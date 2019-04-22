@@ -19,7 +19,7 @@ namespace Education.UI.usercontrols
 
         private void NameStartButton_Click(object sender, EventArgs e)
         {
-            
+             
             NameQuizcontrol nameQuizcontrol = new NameQuizcontrol();
             QuizContentPanel.Controls.Clear();
             QuizContentPanel.Controls.Add(nameQuizcontrol);

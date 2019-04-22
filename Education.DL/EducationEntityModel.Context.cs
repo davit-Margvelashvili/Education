@@ -16,7 +16,7 @@ namespace Education.DL
     public partial class EducationDataBaseEntities : DbContext
     {
         public EducationDataBaseEntities()
-            : base(@"C:\Users\Student.DESKTOP-JFLC3TS\Education\Education.DL\EducationDataBaseEntities")
+            : base("name=EducationDataBaseEntities")
         {
         }
     
@@ -26,5 +26,7 @@ namespace Education.DL
         }
     
         public virtual DbSet<PeriodicTable> PeriodicTables { get; set; }
+        public virtual DbSet<Answers> Answers { get; set; }
+        public virtual DbSet<Questions> Questions { get; set; }
     }
 }

@@ -6,6 +6,9 @@
     <edmx:Diagrams>
       <Diagram DiagramId="eda7ca20b48f4c48a632b20d76d479ae" Name="Diagram1" >
         <EntityTypeShape EntityType="EducationDataBaseModel.PeriodicTable" Width="2.625" PointX="0.75" PointY="0.75" />
+        <EntityTypeShape EntityType="EducationDataBaseModel.Answers" Width="1.5" PointX="6.625" PointY="0.875" />
+        <EntityTypeShape EntityType="EducationDataBaseModel.Questions" Width="1.5" PointX="4.375" PointY="1.125" />
+        <AssociationConnector Association="EducationDataBaseModel.FK_Answers_To_Questions" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>
